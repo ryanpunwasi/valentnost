@@ -1,0 +1,232 @@
+.banner {
+  position: absolute;
+  justify-content: space-between;
+  max-height: 20vh;
+  align-items: center;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 3px solid var(--bg-violet);
+  padding: 1.5em 2em;
+  background-color: var(--bg-purple);
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.banner-text {
+  color: var(--bg-violet);
+  font-size: 1.3rem;
+  letter-spacing: 1.1px;
+}
+
+.banner-button {
+  padding: 0.7em 1.5em;
+  width: 8em;
+  border: 3px solid var(--bg-violet);
+  background-color: transparent;
+  border-radius: 10px;
+  color: var(--bg-violet);
+  font-weight: 900;
+  font-family: 'Mallanna';
+}
+
+.banner-button > i {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.banner-button:hover {
+  cursor: pointer;
+  background-color: var(--bg-violet);
+  color: var(--bg-purple);
+  transition: background-color 300ms ease-out;
+}
+
+.banner.banner-nonmetals {
+  border-top: 3px solid var(--non-metal);
+}
+
+.banner-button.banner-nonmetals {
+  border: 3px solid var(--non-metal);
+  color: var(--non-metal);
+}
+
+.banner-button.banner-nonmetals:hover {
+  background-color: var(--non-metal);
+  color: var(--bg-purple);
+}
+
+.banner.banner-alkali-metals {
+  border-top: 3px solid var(--alkali-metal);
+}
+
+.banner-button.banner-alkali-metals {
+  border: 3px solid var(--alkali-metal);
+  color: var(--alkali-metal);
+}
+
+.banner-button.banner-transition-metals {
+  border: 3px solid var(--transition-metal);
+  color: var(--transition-metal);
+}
+
+.banner-button.banner-alkali-metals:hover {
+  background-color: var(--alkali-metal);
+  color: var(--bg-purple);
+}
+
+.banner.banner-alkaline-earth-metals {
+  border-top: 3px solid var(--alkaline-earth-metal);
+}
+
+.banner.banner-metalloids {
+  border-top: 3px solid var(--metalloid);
+}
+
+.banner.banner-halogens {
+  border-top: 3px solid var(--halogen);
+}
+
+.banner.banner-transition-metals {
+  border-top: 3px solid var(--transition-metal);
+}
+
+.banner.banner-post-transition-metals {
+  border-top: 3px solid var(--post-transition-metal);
+}
+
+.banner.banner-noble-gases {
+  border-top: 3px solid var(--noble-gas);
+}
+
+.banner.banner-lanthanides {
+  border-top: 3px solid var(--lanthanide);
+}
+
+.banner.banner-actinides {
+  border-top: 3px solid var(--actinide);
+}
+
+.banner-button.banner-alkaline-earth-metals {
+  border: 3px solid var(--alkaline-earth-metal);
+  color: var(--alkaline-earth-metal);
+}
+
+.banner-button.banner-transition-metals:hover {
+  background-color: var(--transition-metal);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-alkaline-earth-metals:hover {
+  background-color: var(--alkaline-earth-metal);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-metalloids {
+  border: 3px solid var(--metalloid);
+  color: var(--halogen);
+}
+
+.banner-button.banner-metalloids:hover {
+  background-color: var(--metalloid);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-halogens {
+  border: 3px solid var(--halogen);
+  color: var(--halogen);
+}
+
+.banner-button.banner-halogens:hover {
+  background-color: var(--halogen);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-post-transition-metals {
+  border: 3px solid var(--post-transition-metal);
+  color: var(--post-transition-metal);
+}
+
+.banner-button.banner-post-transition-metals:hover {
+  background-color: var(--post-transition-metal);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-noble-gases {
+  border: 3px solid var(--noble-gas);
+  color: var(--noble-gas);
+}
+
+.banner-button.banner-noble-gases:hover {
+  background-color: var(--noble-gas);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-lanthanides {
+  border: 3px solid var(--lanthanide);
+  color: var(--lanthanide);
+}
+
+.banner-button.banner-lanthanides:hover {
+  background-color: var(--lanthanide);
+  color: var(--bg-purple);
+}
+
+.banner-button.banner-actinides {
+  border: 3px solid var(--actinide);
+  color: var(--actinide);
+}
+
+.banner-button.banner-actinides:hover {
+  background-color: var(--actinide);
+  color: var(--bg-purple);
+}
+
+.banner.banner-correct {
+  border-top: 3px solid aquamarine;
+}
+
+.banner.banner-correct .banner-text {
+  color: aquamarine;
+}
+
+.banner.banner-correct .banner-button {
+  color: aquamarine;
+  border: 3px solid aquamarine;
+}
+
+.banner.banner-correct .banner-button:hover {
+  color: var(--bg-purple);
+  background-color: aquamarine;
+}
+
+.banner.banner-incorrect {
+  border-top: 3px solid rgb(230, 78, 78);
+}
+
+.banner.banner-incorrect .banner-text {
+  color: rgb(230, 78, 78);
+}
+
+.banner.banner-incorrect .banner-button {
+  color: rgb(230, 78, 78);
+  border: 3px solid rgb(230, 78, 78);
+}
+
+.banner.banner-incorrect .banner-button:hover {
+  color: var(--bg-purple);
+  background-color: rgb(230, 78, 78);
+}
+
+@media only screen and (max-height: 500px) {
+  .banner-text {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner-text {
+    font-size: 0.9em;
+  }
+}

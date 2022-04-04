@@ -1,0 +1,187 @@
+.selected-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.highlighted-element {
+  --default-color: rgb(255, 179, 249);
+  position: relative;
+  height: 120px;
+  width: 130px;
+  border-top: 3px solid var(--default-color);
+  border-left: 3px solid var(--default-color);
+  border-right: 3px solid var(--default-color);
+
+  box-shadow: 0 10px var(--default-color);
+  color: var(--default-color);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.highlighted-element.highlight-nonmetals {
+  border-top: 3px solid var(--non-metal);
+  border-left: 3px solid var(--non-metal);
+  border-right: 3px solid var(--non-metal);
+
+  box-shadow: 0 10px var(--non-metal);
+  color: var(--non-metal);
+}
+
+.highlighted-element.highlight-alkali-metals {
+  border-top: 3px solid var(--alkali-metal);
+  border-left: 3px solid var(--alkali-metal);
+  border-right: 3px solid var(--alkali-metal);
+
+  box-shadow: 0 10px var(--alkali-metal);
+  color: var(--alkali-metal);
+}
+
+.highlighted-element.highlight-alkaline-earth-metals {
+  border-top: 3px solid var(--alkaline-earth-metal);
+  border-left: 3px solid var(--alkaline-earth-metal);
+  border-right: 3px solid var(--alkaline-earth-metal);
+
+  box-shadow: 0 10px var(--alkaline-earth-metal);
+  color: var(--alkaline-earth-metal);
+}
+
+.highlighted-element.highlight-transition-metals {
+  border-top: 3px solid var(--transition-metal);
+  border-left: 3px solid var(--transition-metal);
+  border-right: 3px solid var(--transition-metal);
+
+  box-shadow: 0 10px var(--transition-metal);
+  color: var(--transition-metal);
+}
+
+.highlighted-element.highlight-post-transition-metals {
+  border-top: 3px solid var(--post-transition-metal);
+  border-left: 3px solid var(--post-transition-metal);
+  border-right: 3px solid var(--post-transition-metal);
+
+  box-shadow: 0 10px var(--post-transition-metal);
+  color: var(--post-transition-metal);
+}
+
+.highlighted-element.highlight-metalloids {
+  border-top: 3px solid var(--metalloid);
+  border-left: 3px solid var(--metalloid);
+  border-right: 3px solid var(--metalloid);
+
+  box-shadow: 0 10px var(--metalloid);
+  color: var(--metalloid);
+}
+
+.highlighted-element.highlight-halogens {
+  border-top: 3px solid var(--halogen);
+  border-left: 3px solid var(--halogen);
+  border-right: 3px solid var(--halogen);
+
+  box-shadow: 0 10px var(--halogen);
+  color: var(--halogen);
+}
+
+.highlighted-element.highlight-noble-gases {
+  border-top: 3px solid var(--noble-gas);
+  border-left: 3px solid var(--noble-gas);
+  border-right: 3px solid var(--noble-gas);
+
+  box-shadow: 0 10px var(--noble-gas);
+  color: var(--noble-gas);
+}
+
+.highlighted-element.highlight-lanthanides {
+  border-top: 3px solid var(--lanthanide);
+  border-left: 3px solid var(--lanthanide);
+  border-right: 3px solid var(--lanthanide);
+
+  box-shadow: 0 10px var(--lanthanide);
+  color: var(--lanthanide);
+}
+
+.highlighted-element.highlight-actinides {
+  border-top: 3px solid var(--actinide);
+  border-left: 3px solid var(--actinide);
+  border-right: 3px solid var(--actinide);
+
+  box-shadow: 0 10px var(--actinide);
+  color: var(--actinide);
+}
+
+.selected-symbol {
+  position: absolute;
+  font-weight: 700;
+  font-size: 2.3rem;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.selected-name {
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%);
+  user-select: none;
+  font-size: 1rem;
+}
+
+.selected-placeholder {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.selected-atomic-number {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+.selected-state {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+.selected-group {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 0.75rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1180px) {
+  .highlighted-element {
+    height: 100px;
+    width: 110px;
+  }
+
+  .selected-placeholder,
+  .selected-symbol {
+    font-size: 2rem;
+  }
+
+  .selected-name {
+    bottom: 15px;
+  }
+
+  .selected-group {
+    bottom: 3px;
+  }
+}

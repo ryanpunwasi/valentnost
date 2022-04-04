@@ -1,0 +1,295 @@
+.element-container {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border: 2px solid white;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.element-symbol {
+  position: absolute;
+  font-weight: 700;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.element-name {
+  position: absolute;
+  font-size: 0.7em;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.element-number {
+  position: absolute;
+  font-size: 0.7em;
+  top: 5px;
+  right: 5px;
+}
+
+.nonmetals-label {
+  color: var(--non-metal);
+  border: 2px solid var(--non-metal);
+  box-shadow: 0 4px var(--non-metal);
+}
+
+.nonmetals-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--non-metal);
+}
+
+.nonmetals-label.active {
+  color: var(--bg-purple);
+  background-color: var(--non-metal);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .nonmetals-label {
+  color: var(--bg-purple);
+  background-color: var(--non-metal);
+}
+
+.alkali-metals-label {
+  color: var(--alkali-metal);
+  border: 2px solid var(--alkali-metal);
+  box-shadow: 0 4px var(--alkali-metal);
+}
+
+.alkali-metals-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--alkali-metal);
+}
+
+.alkali-metals-label.active {
+  color: var(--bg-purple);
+  background-color: var(--alkali-metal);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .alkali-metals {
+  color: var(--bg-purple);
+  background-color: var(--alkali-metal);
+}
+
+.alkaline-earth-metals-label {
+  color: var(--alkaline-earth-metal);
+  border: 2px solid var(--alkaline-earth-metal);
+  box-shadow: 0 4px var(--alkaline-earth-metal);
+}
+
+.alkaline-earth-metals-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--alkaline-earth-metal);
+}
+
+.alkaline-earth-metals-label.active {
+  color: var(--bg-purple);
+  background-color: var(--alkaline-earth-metal);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .alkaline-earth-metals {
+  color: var(--bg-purple);
+  background-color: var(--alkaline-earth-metal);
+}
+
+.metalloids-label {
+  color: var(--metalloid);
+  border: 2px solid var(--metalloid);
+  box-shadow: 0 4px var(--metalloid);
+}
+
+.metalloids-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--metalloid);
+}
+
+.metalloids-label.active {
+  color: var(--bg-purple);
+  background-color: var(--metalloid);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .metalloids {
+  color: var(--bg-purple);
+  background-color: var(--metalloid);
+}
+
+.halogens-label {
+  color: var(--halogen);
+  border: 2px solid var(--halogen);
+  box-shadow: 0 4px var(--halogen);
+}
+
+.halogens-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--halogen);
+}
+
+.halogens-label.active {
+  color: var(--bg-purple);
+  background-color: var(--halogen);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .halogens {
+  color: var(--bg-purple);
+  background-color: var(--halogen);
+}
+
+.transition-metals-label {
+  color: var(--transition-metal);
+  border: 2px solid var(--transition-metal);
+  box-shadow: 0 4px var(--transition-metal);
+}
+
+.transition-metals-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--transition-metal);
+}
+
+.transition-metals-label.active {
+  color: var(--bg-purple);
+  background-color: var(--transition-metal);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .transition-metals {
+  color: var(--bg-purple);
+  background-color: var(--transition-metal);
+}
+
+.post-transition-metals-label {
+  color: var(--post-transition-metal);
+  border: 2px solid var(--post-transition-metal);
+  box-shadow: 0 4px var(--post-transition-metal);
+}
+
+.post-transition-metals-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--post-transition-metal);
+}
+
+.post-transition-metals-label.active {
+  color: var(--bg-purple);
+  background-color: var(--post-transition-metal);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .post-transition-metals {
+  color: var(--bg-purple);
+  background-color: var(--post-transition-metal);
+}
+
+.noble-gases-label {
+  color: var(--noble-gas);
+  border: 2px solid var(--noble-gas);
+  box-shadow: 0 4px var(--noble-gas);
+}
+
+.noble-gases-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--noble-gas);
+}
+
+.noble-gases-label.active {
+  color: var(--bg-purple);
+  background-color: var(--noble-gas);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .noble-gases {
+  color: var(--bg-purple);
+  background-color: var(--noble-gas);
+}
+
+.lanthanides-label {
+  color: var(--lanthanide);
+  border: 2px solid var(--lanthanide);
+  box-shadow: 0 4px var(--lanthanide);
+}
+
+.lanthanides-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--lanthanide);
+}
+
+.lanthanides-label.active {
+  color: var(--bg-purple);
+  background-color: var(--lanthanide);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .lanthanides {
+  color: var(--bg-purple);
+  background-color: var(--lanthanide);
+}
+
+.actinides-label {
+  color: var(--actinide);
+  border: 2px solid var(--actinide);
+  box-shadow: 0 4px var(--actinide);
+}
+
+.actinides-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px var(--actinide);
+}
+
+.actinides-label.active {
+  color: var(--bg-purple);
+  background-color: var(--actinide);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.container input:checked + .actinides {
+  color: var(--bg-purple);
+  background-color: var(--actinide);
+}
+
+@media only screen and (max-width: 1180px) {
+  .element-container {
+    height: 50px;
+    width: 50px;
+  }
+
+  .element-name {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .element-container {
+    height: 47px;
+    width: 50px;
+  }
+
+  .element-name {
+    display: none;
+  }
+
+  .element-symbol {
+    top: 55%;
+  }
+
+  .element-number {
+    font-size: 0.5em;
+  }
+}

@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.chemical-group-radio-container {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--bg-purple);
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 5px 15px;
+  transition: color ease-out 100ms, background-color ease-out 100ms;
+}
+
+.chemical-group-radio {
+  position: absolute;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chemical-group-radio-container:hover,
+.chemical-group-radio:hover,
+.chemical-group-label:hover {
+  cursor: pointer;
+}
+
+.nonmetals {
+  color: var(--non-metal);
+  border: 3px solid var(--non-metal);
+}
+
+.nonmetals:hover,
+.container input:checked + .nonmetals {
+  color: var(--bg-purple);
+  background-color: var(--non-metal);
+}
+
+.alkali-metals {
+  color: var(--alkali-metal);
+  border: 3px solid var(--alkali-metal);
+}
+
+.alkali-metals:hover,
+.container input:checked + .alkali-metals {
+  color: var(--bg-purple);
+  background-color: var(--alkali-metal);
+}
+
+.alkaline-earth-metals {
+  color: var(--alkaline-earth-metal);
+  border: 3px solid var(--alkaline-earth-metal);
+}
+
+.alkaline-earth-metals:hover,
+.container input:checked + .alkaline-earth-metals {
+  color: var(--bg-purple);
+  background-color: var(--alkaline-earth-metal);
+}
+
+.metalloids {
+  color: var(--metalloid);
+  border: 3px solid var(--metalloid);
+}
+
+.metalloids:hover,
+.container input:checked + .metalloids {
+  color: var(--bg-purple);
+  background-color: var(--metalloid);
+}
+
+.halogens {
+  color: var(--halogen);
+  border: 3px solid var(--halogen);
+}
+
+.halogens:hover,
+.container input:checked + .halogens {
+  color: var(--bg-purple);
+  background-color: var(--halogen);
+}
+
+.transition-metals {
+  color: var(--transition-metal);
+  border: 3px solid var(--transition-metal);
+}
+
+.transition-metals:hover,
+.container input:checked + .transition-metals {
+  color: var(--bg-purple);
+  background-color: var(--transition-metal);
+}
+
+.post-transition-metals {
+  color: var(--post-transition-metal);
+  border: 3px solid var(--post-transition-metal);
+}
+
+.post-transition-metals:hover,
+.container input:checked + .post-transition-metals {
+  color: var(--bg-purple);
+  background-color: var(--post-transition-metal);
+}
+
+.noble-gases {
+  color: var(--noble-gas);
+  border: 3px solid var(--noble-gas);
+}
+
+.noble-gases:hover,
+.container input:checked + .noble-gases {
+  color: var(--bg-purple);
+  background-color: var(--noble-gas);
+}
+
+.lanthanides {
+  color: var(--lanthanide);
+  border: 3px solid var(--lanthanide);
+}
+
+.lanthanides:hover,
+.container input:checked + .lanthanides {
+  color: var(--bg-purple);
+  background-color: var(--lanthanide);
+}
+
+.actinides {
+  color: var(--actinide);
+  border: 3px solid var(--actinide);
+}
+
+.actinides:hover,
+.container input:checked + .actinides {
+  color: var(--bg-purple);
+  background-color: var(--actinide);
+}

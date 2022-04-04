@@ -1,0 +1,50 @@
+header {
+  min-width: 100%;
+  height: 3.5em;
+}
+
+.nav {
+  background-color: var(--bg-purple);
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 3em;
+  margin-top: 13px;
+}
+
+.nav-list li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+
+.nav-list li:hover {
+  transform: scale(1.1);
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.support i {
+  color: pink;
+}
+
+.home i {
+  color: var(--post-transition-metal);
+}
+
+.twitter i {
+  color: var(--transition-metal);
+}

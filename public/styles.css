@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Mallanna';
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+}
+
+:root {
+  --bg-purple: #282a36;
+  --bg-violet: #a67db8;
+  --bg-green: #395756;
+  --bg-dark: #383a59;
+  --bg-dark-green: #1b3022;
+
+  --non-metal: #ffffb9;
+  --alkali-metal: #ffc7c7;
+  --alkaline-earth-metal: #d3d3ff;
+  --transition-metal: #bdddff;
+  --post-transition-metal: #bdffbd;
+  --metalloid: #e0edba;
+  --halogen: #ffffb9;
+  --noble-gas: #ffe5be;
+  --lanthanide: #b0ffff;
+  --actinide: #cbffee;
+}

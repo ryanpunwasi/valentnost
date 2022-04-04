@@ -1,0 +1,43 @@
+.button-container {
+  display: flex;
+  position: relative;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.submit-button,
+.reset-button {
+  font-size: 0.8em;
+  padding: 0.8em 2em;
+  width: 8rem;
+  background-color: var(--bg-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: 'Mallanna';
+}
+
+.submit-button {
+  background-color: var(--bg-green);
+  color: white;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: #5b8f8d;
+  transition: background-color ease-in 150ms;
+}
+
+.reset-button {
+  background-color: rgb(185, 80, 80);
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background-color: rgb(184, 112, 112);
+  transition: background-color ease-in 150ms;
+}
