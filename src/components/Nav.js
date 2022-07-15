@@ -14,7 +14,7 @@ const Nav = () => {
       <nav className='nav'>
         <ul className='nav-list'>
           <li className='home'><Link to='/'><i className="fa-solid fa-vial"></i></Link></li>
-          <li className='support'><a href="https://www.buymeacoffee.com/bryndenrivers" target='_blank' rel='noreferrer'><i className="fa-regular fa-heart"></i></a></li>
+          <li className='support'><a href="https://www.buymeacoffee.com/ryanpunwasi" target='_blank' rel='noreferrer'><i className="fa-regular fa-heart"></i></a></li>
           <li className='twitter'><a href={TWITTER} target='_blank' rel='noreferrer'><i className="fa-solid fa-hashtag"></i></a></li>
         </ul>
       </nav>
