@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchTable } from '../actions';
 import { apiGrouptoLabel } from '../utils/apiGroupToLabel';
@@ -6,8 +6,12 @@ import { truncateElementName } from '../utils/truncateElementName';
 import './Table.css';
 import Element from './Element';
 import Selected from './Selected';
+import LoadingIcon from './LoadingIcon';
 
 const Table = (props) => {
+
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     props.fetchTable();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -30,7 +34,7 @@ const Table = (props) => {
                   group={apiGrouptoLabel(element.groupBlock)}>
                 </Element>
                 <div key='a'className='empty-row-1'></div>
-                <div key='b' className='selected'><Selected /></div>
+                <div key='b' className='selected'><Selected key="selected"/></div>
                 <div key='c' className='empty-row-1-2'></div>
               </>
             );
