@@ -64,6 +64,7 @@ const PracticeRoute = (props) => {
       <div className='centered-practice-container'>
         <div className='practice-element-container'>
           <div className={`practice-element practice-element-${props.group}`}>
+            <span className={`practice-element-number practice-element-symbol-${props.group}`}>{props.practice.currentElement.number}</span>
             <div className={`practice-element-symbol practice-element-symbol-${props.group}`}>{props.practice.currentElement.symbol}</div>
           </div>
         </div>

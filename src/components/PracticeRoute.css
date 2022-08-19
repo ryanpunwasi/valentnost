@@ -112,6 +112,7 @@
 .practice-element {
   --default-color: rgb(255, 179, 249);
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -239,6 +240,14 @@
 
 .practice-element-symbol-actinides {
   color: var(--actinide);
+}
+
+.practice-element-number {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 1.1em;
+  user-select: none;
 }
 
 .text-input-container {
