@@ -271,58 +271,66 @@
   font-weight: 700;
   text-align: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-  caret-color: rgb(255, 179, 249);
-  caret-color: transparent;
 }
 
 .text-input-nonmetals {
   border: 4px solid var(--non-metal);
   color: var(--non-metal);
+  caret-color: var(--non-metal);
 }
 
 .text-input-alkali-metals {
   border: 4px solid var(--alkali-metal);
   color: var(--alkali-metal);
+  caret-color: var(--alkali-metal);
 }
 
 .text-input-alkaline-earth-metals {
   border: 4px solid var(--alkaline-earth-metal);
   color: var(--alkaline-earth-metal);
+  caret-color: var(--alkaline-earth-metal);
 }
 
 .text-input-metalloids {
   border: 4px solid var(--metalloid);
   color: var(--metalloid);
+  caret-color: var(--metalloid);
 }
 
 .text-input-halogens {
   border: 4px solid var(--halogen);
   color: var(--halogen);
+  caret-color: var(--halogen);
 }
 
 .text-input-transition-metals {
   border: 4px solid var(--transition-metal);
   color: var(--transition-metal);
+  caret-color: var(--transition-metal);
 }
 
 .text-input-post-transition-metals {
   border: 4px solid var(--post-transition-metal);
   color: var(--post-transition-metal);
+  caret-color: var(--post-transition-metal);
 }
 
 .text-input-noble-gases {
   border: 4px solid var(--noble-gas);
   color: var(--noble-gas);
+  caret-color: var(--noble-gas);
 }
 
 .text-input-lanthanides {
   border: 4px solid var(--lanthanide);
   color: var(--lanthanide);
+  caret-color: var(--lanthanide);
 }
 
 .text-input-actinides {
   border: 4px solid var(--actinide);
   color: var(--actinide);
+  caret-color: var(--actinide);
 }
 
 .text-input:focus {
