@@ -1,10 +1,14 @@
 import React from "react";
-import './Seen.css';
+import "./Seen.css";
 
-const Seen = (props) => {
-  return (
-    <div>7 out of 12 seen</div>
-  );
-}
+const Seen = props => {
+  const renderElementsSeen = practice => {
+    const totalElements = practice.elements.length;
+    const seenElements = practice.correct;
+    return `${seenElements}/${totalElements} seen`;
+  };
+
+  return <div className="seen-card">{renderElementsSeen(props.practice)}</div>;
+};
 
 export default Seen;
