@@ -1,20 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { clearForm, hideAlert, endPractice, checkAnswer, nextQuestion } from '../actions';
-import './PracticeRoute.css';
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import {
+  clearForm,
+  hideAlert,
+  endPractice,
+  checkAnswer,
+  nextQuestion,
+} from "../actions";
+import "./PracticeRoute.css";
 
-import Banner from './Banner';
-import Seen from './Seen';
+import Banner from "./Banner";
+import Seen from "./Seen";
 
-const PracticeRoute = (props) => {
-
-  const [text, setText] = useState('');
+const PracticeRoute = props => {
+  const [text, setText] = useState("");
   const inputEl = useRef(null);
 
   const resetText = () => {
-    setText('');
-  }
+    setText("");
+  };
 
   useEffect(() => {
     inputEl.current.focus();
@@ -22,67 +27,102 @@ const PracticeRoute = (props) => {
 
   const handleChange = () => {
     setText(inputEl.current.value);
-  }
+  };
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = e => {
     e.preventDefault();
-    if(text.trim() && !(props.practice.hasAnswered)) {
-      if(text.toLowerCase().trim() === props.practice.currentElement.name.toLowerCase()) {
+    if (text.trim() && !props.practice.hasAnswered) {
+      if (
+        text.toLowerCase().trim() ===
+        props.practice.currentElement.name.toLowerCase()
+      ) {
         props.checkAnswer(true, props.practice.currentElement);
       } else {
         props.checkAnswer(false, props.practice.currentElement);
       }
-      
-    } else if(text && props.practice.hasAnswered){
-      setText('');
-      inputEl.current.value = '';
-      props.nextQuestion(props.practice.answeredCorrect, props.practice.currentElement);
+    } else if (text && props.practice.hasAnswered) {
+      setText("");
+      inputEl.current.value = "";
+      props.nextQuestion(
+        props.practice.answeredCorrect,
+        props.practice.currentElement
+      );
     }
-  }
+  };
 
   const handleClick = () => {
     props.clearForm();
     props.hideAlert();
     props.endPractice();
-  }
+  };
 
   const renderScore = () => {
-    if(props.practice.answered > 0) {
-      return Math.round((props.practice.correct / props.practice.answered) * 100);
+    if (props.practice.answered > 0) {
+      return Math.round(
+        (props.practice.correct / props.practice.answered) * 100
+      );
     } else {
       return 0;
     }
-  }
+  };
 
-  return(
-    <div className='practice-route-container'>
-      <div className='info-bar'>
-        <Link to='/'><button onClick={handleClick} className='exit-button'>END SESSION</button></Link>
-        <Seen />
+  return (
+    <div className="practice-route-container">
+      <div className="info-bar">
+        <Link to="/">
+          <button onClick={handleClick} className="exit-button">
+            END SESSION
+          </button>
+        </Link>
+        <Seen practice={props.practice} />
         <div className={`score-card score-card-${props.group}`}>
           <div>{renderScore()}</div>
         </div>
       </div>
-      <div className='centered-practice-container'>
-        <div className='practice-element-container'>
+      <div className="centered-practice-container">
+        <div className="practice-element-container">
           <div className={`practice-element practice-element-${props.group}`}>
-            <span className={`practice-element-number practice-element-symbol-${props.group}`}>{props.practice.currentElement.number}</span>
-            <div className={`practice-element-symbol practice-element-symbol-${props.group}`}>{props.practice.currentElement.symbol}</div>
+            <span
+              className={`practice-element-number practice-element-symbol-${props.group}`}
+            >
+              {props.practice.currentElement.number}
+            </span>
+            <div
+              className={`practice-element-symbol practice-element-symbol-${props.group}`}
+            >
+              {props.practice.currentElement.symbol}
+            </div>
           </div>
         </div>
         <div className={`text-input-container`}>
-            <form id='form' onSubmit={onFormSubmit} autoComplete='off'>
-              <input ref={inputEl} id='elementTextBox' onChange={handleChange} name='element' className={`text-input text-input-${props.group}`} type='text' value={text} maxLength='20' placeholder='Element Name'/>
-            </form> 
+          <form id="form" onSubmit={onFormSubmit} autoComplete="off">
+            <input
+              ref={inputEl}
+              id="elementTextBox"
+              onChange={handleChange}
+              name="element"
+              className={`text-input text-input-${props.group}`}
+              type="text"
+              value={text}
+              maxLength="20"
+              placeholder="Element Name"
+            />
+          </form>
         </div>
       </div>
-      <Banner input={text} resetText={resetText}/>
+      <Banner input={text} resetText={resetText} />
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
-  return { table: state.stable, group: state.group, practice: state.practice };
-}
+  return { table: state.table, group: state.group, practice: state.practice };
+};
 
-export default connect(mapStateToProps, { clearForm, hideAlert, endPractice, checkAnswer, nextQuestion })(PracticeRoute);
+export default connect(mapStateToProps, {
+  clearForm,
+  hideAlert,
+  endPractice,
+  checkAnswer,
+  nextQuestion,
+})(PracticeRoute);
