@@ -5,6 +5,7 @@ import { clearForm, hideAlert, endPractice, checkAnswer, nextQuestion } from '..
 import './PracticeRoute.css';
 
 import Banner from './Banner';
+import Seen from './Seen';
 
 const PracticeRoute = (props) => {
 
@@ -57,6 +58,7 @@ const PracticeRoute = (props) => {
     <div className='practice-route-container'>
       <div className='info-bar'>
         <Link to='/'><button onClick={handleClick} className='exit-button'>END SESSION</button></Link>
+        <Seen />
         <div className={`score-card score-card-${props.group}`}>
           <div>{renderScore()}</div>
         </div>
