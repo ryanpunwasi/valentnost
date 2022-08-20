@@ -76,7 +76,7 @@ const PracticeRoute = props => {
         </Link>
         <Seen practice={props.practice} />
         <div className={`score-card score-card-${props.group}`}>
-          <div>{renderScore()}</div>
+          <div>{renderScore()}%</div>
         </div>
       </div>
       <div className="centered-practice-container">
