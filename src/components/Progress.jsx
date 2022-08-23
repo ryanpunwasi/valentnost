@@ -19,7 +19,7 @@ const Progress = props => {
     <div className="progress">
       {
         <ProgressBar
-          progress={progress}
+          progress={props.practice.progress}
           setProgress={setProgress}
           setMastered={setMastered}
           group={props.group}
@@ -27,7 +27,7 @@ const Progress = props => {
       }
       {!mastered && (
         <div className={`progress-status progress-status-${props.group}`}>
-          {renderProgress(progress)}
+          {renderProgress(props.practice.progress)}
         </div>
       )}
       {mastered && (
