@@ -8,19 +8,12 @@ const ProgressBar = props => {
     return props.setProgress(updated);
   };
 
-  const renderProgress = progress => {
-    let rendered = progress === "MASTERED" ? progress : progress + "%";
-    return rendered;
-  };
-
   return (
     <div
       className={`progress-bar progress-bar-${props.group}`}
       onClick={() => updateProgress(props.progress + 5)}
-      data-progress={props.progress}
-    >
-      <span>{renderProgress(props.progress)}</span>
-    </div>
+      style={{ "--width": props.progress }}
+    ></div>
   );
 };
 
