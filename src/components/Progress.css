@@ -1,0 +1,84 @@
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  height: 3em;
+  border-radius: 50px;
+  user-select: none;
+  font-size: 1em;
+}
+
+.progress-bar-noble-gases {
+  border: 3px solid var(--noble-gas);
+  color: var(--noble-gas);
+  position: relative;
+}
+
+.progress-bar-noble-gases::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--noble-gas);
+  max-width: 100%;
+  min-width: 0%;
+  width: 1%;
+  border-radius: 50px;
+}
+
+.progress-bar-nonmetals {
+  border: 3px solid var(--non-metal);
+  color: var(--non-metal);
+}
+
+.progress-bar-alkali-metals {
+  border: 3px solid var(--alkali-metal);
+  color: var(--alkali-metal);
+}
+
+.progress-bar-alkaline-earth-metals {
+  border: 3px solid var(--alkaline-earth-metal);
+  color: var(--alkaline-earth-metal);
+}
+
+.progress-bar-metalloids {
+  border: 3px solid var(--metalloid);
+  color: var(--metalloid);
+}
+
+.progress-bar-halogens {
+  border: 3px solid var(--halogen);
+  color: var(--halogen);
+}
+
+.progress-bar-transition-metals {
+  border: 3px solid var(--transition-metal);
+  color: var(--transition-metal);
+}
+
+.progress-bar-post-transition-metals {
+  border: 3px solid var(--post-transition-metal);
+  color: var(--post-transition-metal);
+}
+
+.progress-bar-lanthanides {
+  border: 3px solid var(--lanthanide);
+  color: var(--lanthanide);
+}
+
+.progress-bar-actinides {
+  border: 3px solid var(--actinide);
+  color: var(--actinide);
+}
