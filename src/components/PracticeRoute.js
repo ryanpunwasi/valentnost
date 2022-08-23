@@ -11,6 +11,7 @@ import {
 import "./PracticeRoute.css";
 
 import Banner from "./Banner";
+import Progress from "./Progress";
 import Seen from "./Seen";
 
 const PracticeRoute = props => {
@@ -68,6 +69,9 @@ const PracticeRoute = props => {
 
   return (
     <div className="practice-route-container">
+      <div>
+        <Progress group={props.group} />
+      </div>
       <div className="info-bar">
         <Link to="/">
           <button onClick={handleClick} className="exit-button">
@@ -75,9 +79,9 @@ const PracticeRoute = props => {
           </button>
         </Link>
         <Seen practice={props.practice} />
-        <div className={`score-card score-card-${props.group}`}>
+        {/* <div className={`score-card score-card-${props.group}`}>
           <div>{renderScore()}%</div>
-        </div>
+        </div> */}
       </div>
       <div className="centered-practice-container">
         <div className="practice-element-container">
