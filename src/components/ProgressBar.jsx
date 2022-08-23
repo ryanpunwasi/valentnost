@@ -11,7 +11,6 @@ const ProgressBar = props => {
   return (
     <div
       className={`progress-bar progress-bar-${props.group}`}
-      onClick={() => updateProgress(props.progress + 5)}
       style={{ "--width": props.progress }}
     ></div>
   );
