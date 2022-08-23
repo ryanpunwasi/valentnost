@@ -11,31 +11,122 @@
   justify-content: center;
   align-items: center;
   min-width: 50%;
-  height: 3em;
+  height: 2em;
   border-radius: 50px;
   user-select: none;
   font-size: 1em;
+  position: relative;
+  overflow: hidden;
 }
 
 .progress-bar-noble-gases {
   border: 3px solid var(--noble-gas);
   color: var(--noble-gas);
-  position: relative;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
-.progress-bar-noble-gases::before {
+.progress-status {
+  font-size: 1em;
+  width: 1em;
+}
+
+.progress-status:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.progress-status-noble-gases {
+  color: var(--noble-gas);
+}
+
+.progress-status-nonmetals {
+  color: var(--non-metal);
+}
+
+.progress-status-alkali-metals {
+  color: var(--alkali-metal);
+}
+
+.progress-status-alkaline-earth-metals {
+  color: var(--alkaline-earth-metal);
+}
+
+.progress-status-metalloids {
+  color: var(--metalloid);
+}
+
+.progress-status-halogens {
+  color: var(--halogen);
+}
+
+.progress-status-transition-metals {
+  color: var(--transition-metal);
+}
+
+.progress-status-post-transition-metals {
+  color: var(--post-transition-metal);
+}
+
+.progress-status-lanthanides {
+  color: var(--lanthanide);
+}
+
+.progress-status-actinides {
+  color: var(--actinide);
+}
+
+.progress-bar::before {
   content: "";
   display: flex;
   align-items: center;
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: var(--noble-gas);
-  max-width: 100%;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  max-width: calc(100% - 10px);
   min-width: 0%;
-  width: 1%;
+  width: calc(var(--width, 0) * 1%);
   border-radius: 50px;
+}
+
+.progress-bar-noble-gases::before {
+  background-color: var(--noble-gas);
+}
+
+.progress-bar-nonmetals::before {
+  background-color: var(--non-metal);
+}
+
+.progress-bar-alkali-metals::before {
+  background-color: var(--alkali-metal);
+}
+
+.progress-bar-alkaline-earth-metals::before {
+  background-color: var(--alkaline-earth-metal);
+}
+
+.progress-bar-metalloids::before {
+  background-color: var(--metalloid);
+}
+
+.progress-bar-halogens::before {
+  background-color: var(--halogen);
+}
+
+.progress-bar-transition-metals::before {
+  background-color: var(--transition-metal);
+}
+
+.progress-bar-post-transition-metals::before {
+  background-color: var(--post-transition-metal);
+}
+
+.progress-bar-lanthanides::before {
+  background-color: var(--lanthanide);
+}
+
+.progress-bar-actinides::before {
+  background-color: var(--actinide);
 }
 
 .progress-bar-nonmetals {
