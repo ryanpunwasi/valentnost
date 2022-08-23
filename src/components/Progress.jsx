@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
+import { connect } from "react-redux";
+import { hideAlert, clearForm, endPractice } from "../actions";
 
 import "./Progress.css";
 
@@ -7,19 +10,50 @@ const Progress = props => {
   const [mastered, setMastered] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  const renderProgress = progress => {
+    let rendered = progress === "MASTERED" ? progress : progress + "%";
+    return rendered;
+  };
+
   return (
     <div className="progress">
-      {!mastered && (
+      {
         <ProgressBar
           progress={progress}
           setProgress={setProgress}
           setMastered={setMastered}
           group={props.group}
         />
+      }
+      {!mastered && (
+        <div className={`progress-status progress-status-${props.group}`}>
+          {renderProgress(progress)}
+        </div>
       )}
-      {mastered && <ProgressBar progress="MASTERED" group={props.group} />}
+      {mastered && (
+        <Link to="/">
+          <div
+            className={`progress-status progress-status-${props.group}`}
+            onClick={() => {
+              props.clearForm();
+              props.hideAlert();
+              props.endPractice();
+            }}
+          >
+            Mastered!
+          </div>
+        </Link>
+      )}
     </div>
   );
 };
 
-export default Progress;
+const mapStateToProps = state => {
+  return { table: state.table, group: state.group, practice: state.practice };
+};
+
+export default connect(mapStateToProps, {
+  hideAlert,
+  clearForm,
+  endPractice,
+})(Progress);
