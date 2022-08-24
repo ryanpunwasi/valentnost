@@ -7,6 +7,7 @@ import {
   HIDE_ALERT,
   START_PRACTICE,
   CHECK_ANSWER,
+  UPDATE_PROGESS,
   NEXT_QUESTION,
   END_PRACTICE,
 } from "./types";
@@ -70,6 +71,15 @@ export const checkAnswer = (isCorrect, currentElement) => {
     payload: {
       isCorrect,
       currentElement,
+    },
+  };
+};
+
+export const updateProgress = practice => {
+  return {
+    type: UPDATE_PROGESS,
+    payload: {
+      practice,
     },
   };
 };
