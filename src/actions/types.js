@@ -7,4 +7,5 @@ export const SHOW_ALERT = "SHOW_ALERT";
 export const START_PRACTICE = "START_PRACTICE";
 export const NEXT_QUESTION = "NEXT_QUESTION";
 export const CHECK_ANSWER = "CHECK_ANSWER";
+export const UPDATE_PROGESS = "UPDATE_PROGRESS";
 export const END_PRACTICE = "END_PRACTICE";
