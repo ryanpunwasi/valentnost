@@ -1,7 +1,30 @@
 import { round } from "./round";
 
-export const calculateProgress = practiceObj => {
-  return practiceObj;
+const MASTERY_RATIO = 0.8;
+
+export const calculateProgress = practice => {
+  const seenRatio = calculateSeenRatio(
+    practice.seen.length,
+    practice.elements.length
+  );
+  const minimum = calculateMinimumNumberOfQuestions(practice.elements.length);
+  const minimumQuestionsRatio = calculateNumberOfQuestionsAnsweredRatio(
+    practice.answered,
+    minimum
+  );
+
+  const masteryRatio = calculateMasteryRatio(
+    practice.correct,
+    practice.answered,
+    MASTERY_RATIO
+  );
+
+  const incorrectRatio = calculateIncorrectRatio(practice.incorrect);
+
+  const progressRaw =
+    (seenRatio + minimumQuestionsRatio + masteryRatio) / (3 + incorrectRatio);
+  const progress = progressRaw > 1 ? 1 : progressRaw;
+  return progress;
 };
 
 export const calculateMinimumNumberOfQuestions = numberOfElements => {
@@ -31,7 +54,7 @@ export const calculateMasteryRatio = (
   masteryRatio
 ) => {
   const ratioRaw = (answeredCorrect / answered) * (1 / masteryRatio);
-  const ratioProcessed = ratioRaw > 1 ? 1 : round(ratioRaw, 4);
+  const ratioProcessed = ratioRaw > 1 ? 1 : !ratioRaw ? 0 : round(ratioRaw, 4);
   return ratioProcessed;
 };
 
