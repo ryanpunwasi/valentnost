@@ -6,6 +6,9 @@ import {
   calculateMasteryRatio,
 } from "../utils/calculateProgress";
 
+import { round } from "../utils/round";
+import { practice01, practice02, practice03 } from "../data/practice";
+
 describe("calculateMinimumNumberOfQuestions", () => {
   it("returns 50 when given the argument 9", () => {
     const actual = calculateMinimumNumberOfQuestions(9);
@@ -100,6 +103,26 @@ describe("calculateMasteryRatio", () => {
   it("returns 0 when answeredCorrect is 0", () => {
     const actual = calculateMasteryRatio(0, 50, 0.8);
     const expected = 0;
+    expect(actual).toBe(expected);
+  });
+});
+
+describe("calculateProgress", () => {
+  it("returns 0.0476 when given practice01 mock data", () => {
+    const actual = round(calculateProgress(practice01), 4);
+    const expected = 0.0476;
+    expect(actual).toBe(expected);
+  });
+
+  it("returns 1 when given practice02 mock data", () => {
+    const actual = round(calculateProgress(practice02), 4);
+    const expected = 1;
+    expect(actual).toBe(expected);
+  });
+
+  it("returns 0.6036 when given practice03 mock data", () => {
+    const actual = round(calculateProgress(practice03), 4);
+    const expected = 0.6036;
     expect(actual).toBe(expected);
   });
 });
