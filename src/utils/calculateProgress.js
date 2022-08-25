@@ -22,7 +22,7 @@ export const calculateProgress = practice => {
   const incorrectRatio = calculateIncorrectRatio(practice.incorrect);
 
   const progressRaw =
-    (seenRatio + minimumQuestionsRatio + masteryRatio) / (3 + incorrectRatio);
+    (seenRatio + minimumQuestionsRatio * masteryRatio) / (2 + incorrectRatio);
   const progress = progressRaw > 1 ? 1 : progressRaw;
   return progress;
 };
