@@ -6,6 +6,7 @@ import {
   hideAlert,
   endPractice,
   checkAnswer,
+  updateProgress,
   nextQuestion,
 } from "../actions";
 import "./PracticeRoute.css";
@@ -48,6 +49,7 @@ const PracticeRoute = props => {
         props.practice.answeredCorrect,
         props.practice.currentElement
       );
+      props.updateProgress(props.practice);
     }
   };
 
@@ -128,5 +130,6 @@ export default connect(mapStateToProps, {
   hideAlert,
   endPractice,
   checkAnswer,
+  updateProgress,
   nextQuestion,
 })(PracticeRoute);
