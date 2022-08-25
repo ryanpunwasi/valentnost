@@ -15,6 +15,8 @@ import {
 import history from "../history";
 import periodicTable from "../apis/periodicTable";
 import { buildElementsFromGroup } from "../utils/buildElementsFromGroup";
+import { calculateProgress } from "../utils/calculateProgress";
+import { round } from "../utils/round";
 
 export const selectElement = element => {
   return {
@@ -76,10 +78,11 @@ export const checkAnswer = (isCorrect, currentElement) => {
 };
 
 export const updateProgress = practice => {
+  const progress = round(calculateProgress(practice) * 100, 0);
   return {
     type: UPDATE_PROGESS,
     payload: {
-      practice,
+      progress,
     },
   };
 };

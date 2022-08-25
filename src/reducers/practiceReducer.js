@@ -3,6 +3,7 @@ import {
   END_PRACTICE,
   CHECK_ANSWER,
   NEXT_QUESTION,
+  UPDATE_PROGESS,
 } from "../actions/types";
 import _ from "lodash";
 
@@ -66,6 +67,11 @@ export default (state = null, action) => {
           };
         }
       }
+    case UPDATE_PROGESS:
+      return {
+        ...state,
+        progress: action.payload.progress,
+      };
     case NEXT_QUESTION:
       let nextElement;
       let randomElement = _.sample(state.elements);
