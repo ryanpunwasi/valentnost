@@ -59,16 +59,6 @@ const PracticeRoute = props => {
     props.endPractice();
   };
 
-  const renderScore = () => {
-    if (props.practice.answered > 0) {
-      return Math.round(
-        (props.practice.correct / props.practice.answered) * 100
-      );
-    } else {
-      return 0;
-    }
-  };
-
   return (
     <div className="practice-route-container">
       <div>
@@ -81,9 +71,6 @@ const PracticeRoute = props => {
           </button>
         </Link>
         <Seen practice={props.practice} />
-        {/* <div className={`score-card score-card-${props.group}`}>
-          <div>{renderScore()}%</div>
-        </div> */}
       </div>
       <div className="centered-practice-container">
         <div className="practice-element-container">
