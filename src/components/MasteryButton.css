@@ -1,0 +1,54 @@
+.mastery-button {
+  padding: 0.4em 1em;
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 5px;
+  font-family: "Mallanna";
+  text-align: center;
+}
+
+.mastery-button-nonmetals {
+  background-color: var(--non-metal);
+}
+
+.mastery-button-alkali-metals {
+  background-color: var(--alkali-metal);
+}
+
+.mastery-button-alkaline-earth-metals {
+  background-color: var(--alkaline-earth-metal);
+}
+
+.mastery-button-metalloids {
+  background-color: var(--metalloid);
+}
+
+.mastery-button-halogens {
+  background-color: var(--halogen);
+}
+
+.mastery-button-transition-metals {
+  background-color: var(--transition-metal);
+}
+
+.mastery-button-post-transition-metals {
+  background-color: var(--post-transition-metal);
+}
+
+.mastery-button-noble-gases {
+  background-color: var(--noble-gas);
+}
+
+.mastery-button-lanthanides {
+  background-color: var(--lanthanide);
+}
+
+.mastery-button-actinides {
+  background-color: var(--actinide);
+}
+
+.mastery-button:hover {
+  cursor: pointer;
+}
