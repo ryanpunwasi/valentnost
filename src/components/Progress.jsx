@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
+import MasteryButton from "./MasteryButton";
 import { connect } from "react-redux";
 import { hideAlert, clearForm, endPractice } from "../actions";
 
@@ -10,7 +10,7 @@ const Progress = props => {
   const [mastered, setMastered] = useState(false);
 
   const renderProgress = progress => {
-    let rendered = progress === 100 ? "MASTERED" : progress + "%";
+    let rendered = progress === 100 ? <MasteryButton /> : progress + "%";
     return rendered;
   };
 
@@ -27,20 +27,6 @@ const Progress = props => {
         <div className={`progress-status progress-status-${props.group}`}>
           {renderProgress(props.practice.progress)}
         </div>
-      )}
-      {mastered && (
-        <Link to="/">
-          <div
-            className={`progress-status progress-status-${props.group}`}
-            onClick={() => {
-              props.clearForm();
-              props.hideAlert();
-              props.endPractice();
-            }}
-          >
-            Mastered!
-          </div>
-        </Link>
       )}
     </div>
   );
