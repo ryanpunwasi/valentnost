@@ -1,7 +1,7 @@
 export const practice01 = {
   hasAnswered: false,
-  answered: 0,
-  correct: 0,
+  answered: 1,
+  correct: 1,
   incorrect: [],
   seen: ["Krypton"],
   currentElement: {
@@ -111,7 +111,7 @@ export const practice02 = {
 export const practice03 = {
   hasAnswered: false,
   answered: 35,
-  correct: 35,
+  correct: 34,
   incorrect: [
     {
       name: "Helium",

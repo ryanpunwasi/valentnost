@@ -108,9 +108,9 @@ describe("calculateMasteryRatio", () => {
 });
 
 describe("calculateProgress", () => {
-  it("returns 0.0476 when given practice01 mock data", () => {
+  it("returns 0.0815 when given practice01 mock data", () => {
     const actual = round(calculateProgress(practice01), 4);
-    const expected = 0.0476;
+    const expected = 0.0815;
     expect(actual).toBe(expected);
   });
 
@@ -120,9 +120,9 @@ describe("calculateProgress", () => {
     expect(actual).toBe(expected);
   });
 
-  it("returns 0.6036 when given practice03 mock data", () => {
+  it("returns 0.4714 when given practice03 mock data", () => {
     const actual = round(calculateProgress(practice03), 4);
-    const expected = 0.6036;
+    const expected = 0.4714;
     expect(actual).toBe(expected);
   });
 });
