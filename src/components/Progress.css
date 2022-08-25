@@ -26,8 +26,11 @@
 }
 
 .progress-status {
+  display: flex;
+  align-items: center;
   font-size: 1.2em;
   width: 1em;
+  height: 1em;
 }
 
 .progress-status:hover {
