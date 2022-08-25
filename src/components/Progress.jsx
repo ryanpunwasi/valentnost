@@ -8,10 +8,9 @@ import "./Progress.css";
 
 const Progress = props => {
   const [mastered, setMastered] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   const renderProgress = progress => {
-    let rendered = progress === "MASTERED" ? progress : progress + "%";
+    let rendered = progress === 100 ? "MASTERED" : progress + "%";
     return rendered;
   };
 
@@ -20,7 +19,6 @@ const Progress = props => {
       {
         <ProgressBar
           progress={props.practice.progress}
-          setProgress={setProgress}
           setMastered={setMastered}
           group={props.group}
         />
