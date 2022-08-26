@@ -3,7 +3,7 @@
   position: relative;
   gap: 1em;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -18,7 +18,7 @@
   border-radius: 5px;
   letter-spacing: 2px;
   font-weight: 700;
-  font-family: 'Mallanna';
+  font-family: "Mallanna";
 }
 
 .submit-button {
