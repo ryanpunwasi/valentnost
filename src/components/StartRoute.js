@@ -1,23 +1,24 @@
-import React from 'react';
-import './StartRoute.css';
-import Form from './Form';
-import SelectBar from './SelectBar';
-import Table from './Table';
-import ButtonBar from './ButtonBar';
-import Alert from './Alert';
+import React from "react";
+import "./StartRoute.css";
+import Form from "./Form";
+import SelectBar from "./SelectBar";
+import Table from "./Table";
+import ButtonBar from "./ButtonBar";
+import Alert from "./Alert";
+import ToggleSwitch from "./ToggleSwitch";
 
 const StartRoute = () => {
-  return(
+  return (
     <>
       <Form>
         <SelectBar />
-        <Alert message='Please select a group block.'/>
+        <Alert message="Please select a group block." />
+        <ToggleSwitch />
         <ButtonBar />
         <Table />
-        
       </Form>
     </>
   );
-}
+};
 
 export default StartRoute;
