@@ -62,6 +62,14 @@ input:checked + .toggle-switch:before {
   border-radius: 50%;
 }
 
-.toggle-text {
+p.toggle-text {
   color: white;
+}
+
+p.toggle-text:first-child.toggle-text-selected {
+  color: var(--transition-metal);
+}
+
+p.toggle-text:last-child.toggle-text-selected {
+  color: var(--alkali-metal);
 }
