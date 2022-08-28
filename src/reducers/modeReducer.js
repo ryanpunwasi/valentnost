@@ -4,7 +4,7 @@ import { CHANGE_MODE } from "../actions/types";
 export default (state = "name", action) => {
   switch (action.type) {
     case CHANGE_MODE:
-      return action.payload;
+      return action.payload.mode;
     default:
       return state;
   }
