@@ -63,7 +63,7 @@ input:checked + .toggle-switch:before {
 }
 
 p.toggle-text {
-  color: white;
+  color: transparent;
 }
 
 p.toggle-text:first-child.toggle-text-selected {
@@ -72,4 +72,14 @@ p.toggle-text:first-child.toggle-text-selected {
 
 p.toggle-text:last-child.toggle-text-selected {
   color: var(--alkali-metal);
+}
+
+p.name-selected {
+  color: var(--transition-metal);
+  font-weight: 900;
+}
+
+p.symbol-selected {
+  color: var(--alkali-metal);
+  font-weight: 900;
 }

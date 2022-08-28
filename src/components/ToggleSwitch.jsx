@@ -13,9 +13,17 @@ const ToggleSwitch = props => {
     return checked;
   };
 
+  const renderNameSelectedClass = mode =>
+    mode === "name" ? "name-selected" : "";
+
+  const renderSymbolSelectedClass = mode =>
+    mode === "symbol" ? "symbol-selected" : "";
+
   return (
     <div className="toggle-container">
-      <p className="toggle-text">Name</p>
+      <p className={`toggle-text ${renderNameSelectedClass(props.mode)}`}>
+        Name
+      </p>
       <label className="toggle-switch-label">
         <input
           type="checkbox"
@@ -24,7 +32,9 @@ const ToggleSwitch = props => {
         />
         <span className="toggle-switch"></span>
       </label>
-      <p className="toggle-text">Symbol</p>
+      <p className={`toggle-text ${renderSymbolSelectedClass(props.mode)}`}>
+        Symbol
+      </p>
     </div>
   );
 };
