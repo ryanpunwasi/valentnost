@@ -109,7 +109,13 @@ const PracticeRoute = props => {
 };
 
 const mapStateToProps = state => {
-  return { table: state.table, group: state.group, practice: state.practice };
+  const { table, group, practice, mode } = state;
+  return {
+    table,
+    group,
+    practice,
+    mode,
+  };
 };
 
 export default connect(mapStateToProps, {
