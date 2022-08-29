@@ -53,7 +53,7 @@ const PracticeRoute = props => {
     }
   };
 
-  const handleClick = () => {
+  const endSession = () => {
     props.clearForm();
     props.hideAlert();
     props.endPractice();
@@ -66,7 +66,7 @@ const PracticeRoute = props => {
       </div>
       <div className="info-bar">
         <Link to="/">
-          <button onClick={handleClick} className="exit-button">
+          <button onClick={endSession} className="exit-button">
             END SESSION
           </button>
         </Link>
