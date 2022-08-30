@@ -11,6 +11,7 @@ import {
 } from "../actions";
 import "./PracticeRoute.css";
 
+import Prompt from "./Prompt";
 import Banner from "./Banner";
 import Progress from "./Progress";
 import Seen from "./Seen";
@@ -73,20 +74,11 @@ const PracticeRoute = props => {
         <Seen practice={props.practice} />
       </div>
       <div className="centered-practice-container">
-        <div className="practice-element-container">
-          <div className={`practice-element practice-element-${props.group}`}>
-            <span
-              className={`practice-element-number practice-element-symbol-${props.group}`}
-            >
-              {props.practice.currentElement.number}
-            </span>
-            <div
-              className={`practice-element-symbol practice-element-symbol-${props.group}`}
-            >
-              {props.practice.currentElement.symbol}
-            </div>
-          </div>
-        </div>
+        <Prompt
+          group={props.group}
+          element={props.practice.currentElement}
+          mode={props.mode}
+        />
         <div className={`text-input-container`}>
           <form id="form" onSubmit={onFormSubmit} autoComplete="off">
             <input
