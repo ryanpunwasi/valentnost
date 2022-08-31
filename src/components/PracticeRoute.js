@@ -10,6 +10,7 @@ import {
   nextQuestion,
 } from "../actions";
 import "./PracticeRoute.css";
+import { capitalize } from "../utils/capitalize";
 
 import Prompt from "./Prompt";
 import Banner from "./Banner";
@@ -29,16 +30,20 @@ const PracticeRoute = props => {
   });
 
   const handleChange = () => {
-    setText(inputEl.current.value);
+    if (props.mode === "name") {
+      return setText(inputEl.current.value);
+    }
+    return setText(capitalize(inputEl.current.value));
   };
 
   const onFormSubmit = e => {
+    const correctAnswer =
+      props.mode === "name"
+        ? props.practice.currentElement.name.toLowerCase()
+        : props.practice.currentElement.symbol.toLowerCase();
     e.preventDefault();
     if (text.trim() && !props.practice.hasAnswered) {
-      if (
-        text.toLowerCase().trim() ===
-        props.practice.currentElement.name.toLowerCase()
-      ) {
+      if (text.toLowerCase().trim() === correctAnswer) {
         props.checkAnswer(true, props.practice.currentElement);
       } else {
         props.checkAnswer(false, props.practice.currentElement);
@@ -89,8 +94,8 @@ const PracticeRoute = props => {
               className={`text-input text-input-${props.group}`}
               type="text"
               value={text}
-              maxLength="20"
-              placeholder="Element Name"
+              maxLength={props.mode === "name" ? "20" : "2"}
+              placeholder={props.mode === "name" ? "Name" : "Symbol"}
             />
           </form>
         </div>
