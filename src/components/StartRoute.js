@@ -13,6 +13,7 @@ const StartRoute = () => {
       <Form>
         <SelectBar />
         <Alert message="Please select a group block." />
+        <ToggleSwitch />
         <ButtonBar />
         <Table />
       </Form>

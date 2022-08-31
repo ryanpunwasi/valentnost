@@ -10,7 +10,9 @@ import {
   nextQuestion,
 } from "../actions";
 import "./PracticeRoute.css";
+import { capitalize } from "../utils/capitalize";
 
+import Prompt from "./Prompt";
 import Banner from "./Banner";
 import Progress from "./Progress";
 import Seen from "./Seen";
@@ -28,16 +30,20 @@ const PracticeRoute = props => {
   });
 
   const handleChange = () => {
-    setText(inputEl.current.value);
+    if (props.mode === "name") {
+      return setText(inputEl.current.value);
+    }
+    return setText(capitalize(inputEl.current.value));
   };
 
   const onFormSubmit = e => {
+    const correctAnswer =
+      props.mode === "name"
+        ? props.practice.currentElement.name.toLowerCase()
+        : props.practice.currentElement.symbol.toLowerCase();
     e.preventDefault();
     if (text.trim() && !props.practice.hasAnswered) {
-      if (
-        text.toLowerCase().trim() ===
-        props.practice.currentElement.name.toLowerCase()
-      ) {
+      if (text.toLowerCase().trim() === correctAnswer) {
         props.checkAnswer(true, props.practice.currentElement);
       } else {
         props.checkAnswer(false, props.practice.currentElement);
@@ -53,7 +59,7 @@ const PracticeRoute = props => {
     }
   };
 
-  const handleClick = () => {
+  const endSession = () => {
     props.clearForm();
     props.hideAlert();
     props.endPractice();
@@ -66,27 +72,18 @@ const PracticeRoute = props => {
       </div>
       <div className="info-bar">
         <Link to="/">
-          <button onClick={handleClick} className="exit-button">
+          <button onClick={endSession} className="exit-button">
             END SESSION
           </button>
         </Link>
         <Seen practice={props.practice} />
       </div>
       <div className="centered-practice-container">
-        <div className="practice-element-container">
-          <div className={`practice-element practice-element-${props.group}`}>
-            <span
-              className={`practice-element-number practice-element-symbol-${props.group}`}
-            >
-              {props.practice.currentElement.number}
-            </span>
-            <div
-              className={`practice-element-symbol practice-element-symbol-${props.group}`}
-            >
-              {props.practice.currentElement.symbol}
-            </div>
-          </div>
-        </div>
+        <Prompt
+          group={props.group}
+          element={props.practice.currentElement}
+          mode={props.mode}
+        />
         <div className={`text-input-container`}>
           <form id="form" onSubmit={onFormSubmit} autoComplete="off">
             <input
@@ -97,8 +94,8 @@ const PracticeRoute = props => {
               className={`text-input text-input-${props.group}`}
               type="text"
               value={text}
-              maxLength="20"
-              placeholder="Element Name"
+              maxLength={props.mode === "name" ? "20" : "2"}
+              placeholder={props.mode === "name" ? "Name" : "Symbol"}
             />
           </form>
         </div>
@@ -109,7 +106,13 @@ const PracticeRoute = props => {
 };
 
 const mapStateToProps = state => {
-  return { table: state.table, group: state.group, practice: state.practice };
+  const { table, group, practice, mode } = state;
+  return {
+    table,
+    group,
+    practice,
+    mode,
+  };
 };
 
 export default connect(mapStateToProps, {

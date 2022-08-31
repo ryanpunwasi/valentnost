@@ -9,7 +9,7 @@ header {
   top: 0;
   right: 0;
   padding: 0.5em;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px 0 pink;
 }
 
 .nav-list {

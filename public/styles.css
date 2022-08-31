@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mallanna&display=swap");
 
 *,
 *::after,
@@ -12,10 +12,10 @@ a {
 }
 
 body {
-  font-family: 'Mallanna';
+  font-family: "Mallanna";
   margin: 0;
   padding: 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-purple);
 }
 
 :root {

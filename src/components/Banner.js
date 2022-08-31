@@ -55,7 +55,11 @@ const Banner = props => {
       return (
         <div className="banner banner-incorrect">
           <div className="banner-text">
-            The correct answer is {props.practice.currentElement.name}.
+            The correct answer is{" "}
+            {props.mode === "name"
+              ? props.practice.currentElement.name
+              : props.practice.currentElement.symbol}
+            .
           </div>
           <button
             id="next"
@@ -71,7 +75,7 @@ const Banner = props => {
 };
 
 const mapStateToProps = state => {
-  return { practice: state.practice, group: state.group };
+  return { practice: state.practice, group: state.group, mode: state.mode };
 };
 
 export default connect(mapStateToProps, {

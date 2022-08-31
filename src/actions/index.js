@@ -5,6 +5,7 @@ import {
   CLEAR_FORM,
   SHOW_ALERT,
   HIDE_ALERT,
+  CHANGE_MODE,
   START_PRACTICE,
   CHECK_ANSWER,
   UPDATE_PROGESS,
@@ -100,5 +101,14 @@ export const nextQuestion = (isCorrect, currentElement) => {
 export const endPractice = () => {
   return {
     type: END_PRACTICE,
+  };
+};
+
+export const changeMode = mode => {
+  return {
+    type: CHANGE_MODE,
+    payload: {
+      mode,
+    },
   };
 };
