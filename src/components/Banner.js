@@ -75,7 +75,7 @@ const Banner = props => {
 };
 
 const mapStateToProps = state => {
-  return { practice: state.practice, group: state.group };
+  return { practice: state.practice, group: state.group, mode: state.mode };
 };
 
 export default connect(mapStateToProps, {
