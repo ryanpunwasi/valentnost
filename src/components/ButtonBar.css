@@ -7,23 +7,20 @@
   margin-bottom: 20px;
 }
 
-.submit-button,
-.reset-button {
+.form-button {
   font-size: 0.8em;
   padding: 0.8em 2em;
   width: 8rem;
-  background-color: var(--bg-green);
-  color: white;
   border: none;
   border-radius: 5px;
   letter-spacing: 2px;
   font-weight: 700;
   font-family: "Mallanna";
+  color: white;
 }
 
 .submit-button {
   background-color: var(--bg-green);
-  color: white;
 }
 
 .submit-button:hover {
@@ -40,4 +37,12 @@
   cursor: pointer;
   background-color: rgb(184, 112, 112);
   transition: background-color ease-in 150ms;
+}
+
+.disabled-button {
+  background-color: gray;
+}
+
+.disabled-button:hover {
+  cursor: auto;
 }
