@@ -16,4 +16,9 @@ describe("Load form inputs", () => {
     cy.contains("START");
     cy.contains("RESET");
   });
+
+  it("should load periodic table", () => {
+    cy.get(".table-grid").contains("Hydrogen");
+    cy.get(".table-grid").contains("Helium");
+  });
 });
