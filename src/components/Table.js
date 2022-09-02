@@ -10,8 +10,9 @@ import LoadingIcon from "./LoadingIcon";
 
 const Table = props => {
   useEffect(() => {
-    props.fetchTable();
-
+    if (!props.table) {
+      props.fetchTable();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
