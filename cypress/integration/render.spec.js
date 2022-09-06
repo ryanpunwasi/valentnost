@@ -21,4 +21,8 @@ describe("Load form inputs", () => {
     cy.get(".table-grid").contains("Hydrogen");
     cy.get(".table-grid").contains("Helium");
   });
+
+  it("should load selected component", () => {
+    cy.get(".fa-flask");
+  });
 });
