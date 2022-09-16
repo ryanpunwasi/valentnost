@@ -7,14 +7,18 @@
   border-radius: 5px;
   font-family: "Mallanna";
   text-align: center;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 .mastery-button-nonmetals {
   background-color: var(--non-metal);
+  box-shadow: 0 0 0 0 var(--non-metal);
 }
 
 .mastery-button-alkali-metals {
   background-color: var(--alkali-metal);
+  box-shadow: 0 0 0 0 var(--alkali-metal);
 }
 
 .mastery-button-alkaline-earth-metals {
@@ -51,4 +55,14 @@
 
 .mastery-button:hover {
   cursor: pointer;
+}
+
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
