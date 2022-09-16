@@ -23,34 +23,42 @@
 
 .mastery-button-alkaline-earth-metals {
   background-color: var(--alkaline-earth-metal);
+  box-shadow: 0 0 0 0 var(--alkaline-earth-metal);
 }
 
 .mastery-button-metalloids {
   background-color: var(--metalloid);
+  box-shadow: 0 0 0 0 var(--metalloid);
 }
 
 .mastery-button-halogens {
   background-color: var(--halogen);
+  box-shadow: 0 0 0 0 var(--halogen);
 }
 
 .mastery-button-transition-metals {
   background-color: var(--transition-metal);
+  box-shadow: 0 0 0 0 var(--transition-metal);
 }
 
 .mastery-button-post-transition-metals {
   background-color: var(--post-transition-metal);
+  box-shadow: 0 0 0 0 var(--post-transition-metal);
 }
 
 .mastery-button-noble-gases {
   background-color: var(--noble-gas);
+  box-shadow: 0 0 0 0 var(--noble-gas);
 }
 
 .mastery-button-lanthanides {
   background-color: var(--lanthanide);
+  box-shadow: 0 0 0 0 var(--lanthanide);
 }
 
 .mastery-button-actinides {
   background-color: var(--actinide);
+  box-shadow: 0 0 0 0 var(--actinide);
 }
 
 .mastery-button:hover {
