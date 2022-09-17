@@ -63,6 +63,7 @@
 
 .mastery-button:hover {
   cursor: pointer;
+  animation: none;
 }
 
 @keyframes pulse {

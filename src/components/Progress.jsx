@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
 import MasteryButton from "./MasteryButton";
 import { connect } from "react-redux";
@@ -10,7 +11,14 @@ const Progress = props => {
   const [mastered, setMastered] = useState(false);
 
   const renderProgress = progress => {
-    let rendered = progress === 100 ? <MasteryButton /> : progress + "%";
+    let rendered =
+      progress === 100 ? (
+        <Link to="/mastered">
+          <MasteryButton />
+        </Link>
+      ) : (
+        progress + "%"
+      );
     return rendered;
   };
 
