@@ -1,7 +1,8 @@
 import React from "react";
 import "./MasteredRoute.css";
+import { connect } from "react-redux";
 
-const Mastered = () => {
+const MasteredRoute = props => {
   return (
     <div className="mastered-page-container">
       <div id="atom">
@@ -13,8 +14,14 @@ const Mastered = () => {
           <div className="electron"></div>
         </div>
       </div>
+      <p>Congratulations, you've mastered ${props.practice}!</p>
+      <button>Home</button>
     </div>
   );
 };
 
-export default Mastered;
+const mapStateToProps = state => {
+  return { practice: state.practice };
+};
+
+export default connect(mapStateToProps)(MasteredRoute);
