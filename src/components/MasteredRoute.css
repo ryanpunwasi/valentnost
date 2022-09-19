@@ -6,6 +6,19 @@
   height: calc(100vh - 4em);
 }
 
+.mastered-container p {
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.mastered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #atom {
   --atom-size: 300px;
   position: relative;
@@ -13,6 +26,50 @@
   height: var(--atom-size);
   display: inline-block;
   margin: 10px auto;
+  animation: float ease-in-out 3s infinite;
+}
+
+.orbit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.orbit:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 10px solid rgba(250, 250, 250, 0.866);
+  border-radius: 50%;
+}
+
+.orbit {
+  width: 250px;
+  height: 250px;
+  border: 0;
+  transform-style: preserve-3d;
+}
+
+.orbit:nth-child(4) {
+  transform: rotateY(75deg) rotateX(0deg);
+}
+
+.orbit:nth-child(2) {
+  transform: rotateY(65deg) rotateX(-54deg);
+}
+
+.orbit:nth-child(3) {
+  transform: rotateY(65deg) rotateX(54deg);
 }
 
 #nucleus {
@@ -26,21 +83,20 @@
   border-radius: 50%;
   margin: auto;
   background-color: rgb(208, 249, 196);
-  animation: glow ease-in 10s infinite, float ease-in-out 3s infinite;
-  transform: scale(1.5);
+  animation: glow ease-in 10s infinite;
 }
 
 @keyframes float {
   0% {
-    transform: translateY(0);
+    transform: translateY(-5px);
   }
 
   50% {
-    transform: translateY(-15px);
+    transform: translateY(5px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(-5px);
   }
 }
 
@@ -65,4 +121,27 @@
   100% {
     box-shadow: 0 0 5px 15px rgba(0, 0, 0, 0);
   }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.home-button {
+  font-size: 0.8em;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Mallanna";
+  color: white;
+  background-color: var(--bg-green);
+  white-space: nowrap;
+}
+
+.home-button:hover {
+  cursor: pointer;
+  background-color: #5b8f8d;
+  transition: background-color ease-in 150ms;
 }

@@ -28,6 +28,7 @@
 .progress-status {
   display: flex;
   align-items: center;
+  margin-top: -7px;
   font-size: 1.2em;
   width: 1em;
   height: 1em;
