@@ -9,7 +9,8 @@
 .mastered-container p {
   color: white;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.25em;
+  padding: 1em;
 }
 
 .mastered-container {
@@ -17,6 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 #atom {
@@ -24,7 +26,6 @@
   position: relative;
   width: var(--atom-size);
   height: var(--atom-size);
-  display: inline-block;
   margin: 10px auto;
   animation: float ease-in-out 3s infinite;
 }
@@ -49,13 +50,13 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  border: 10px solid rgba(250, 250, 250, 0.866);
+  border: 15px solid rgba(178, 241, 254, 0.866);
   border-radius: 50%;
 }
 
 .orbit {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border: 0;
   transform-style: preserve-3d;
 }
@@ -65,14 +66,15 @@
 }
 
 .orbit:nth-child(2) {
-  transform: rotateY(65deg) rotateX(-54deg);
+  transform: rotateY(60deg) rotateX(-54deg);
 }
 
 .orbit:nth-child(3) {
-  transform: rotateY(65deg) rotateX(54deg);
+  transform: rotateY(60deg) rotateX(54deg);
 }
 
 #nucleus {
+  --nucleus-color: rgb(255, 139, 126);
   position: absolute;
   top: 0;
   right: 0;
@@ -82,7 +84,8 @@
   height: 20px;
   border-radius: 50%;
   margin: auto;
-  background-color: rgb(208, 249, 196);
+  background-color: var(--nucleus-color);
+  --glow-color: rgba(255, 177, 177, 0.2);
   animation: glow ease-in 10s infinite;
 }
 
@@ -106,16 +109,16 @@
   }
 
   20% {
-    box-shadow: 0 0 5px 10px rgba(175, 250, 154, 0.2);
+    box-shadow: 0 0 5px 10px var(--glow-color);
   }
   40% {
-    box-shadow: 0 0 5px 8px rgba(175, 250, 154, 0.2);
+    box-shadow: 0 0 3px 25px var(--glow-color);
   }
   60% {
-    box-shadow: 0 0 5px 10px rgba(175, 250, 154, 0.2);
+    box-shadow: 0 0 5px 10px var(--glow-color);
   }
   80% {
-    box-shadow: 0 0 5px 8px rgba(175, 250, 154, 0.2);
+    box-shadow: 0 0 3px 25px var(--glow-color);
   }
 
   100% {

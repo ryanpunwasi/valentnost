@@ -12,6 +12,8 @@ const MasteredRoute = props => {
     props.endPractice();
   };
 
+  const renderGroup = group => group.replaceAll("-", " ");
+
   return (
     <div className="mastered-page-container">
       {props.practice && (
@@ -30,7 +32,7 @@ const MasteredRoute = props => {
           </div>
           <p>
             Congratulations, you've mastered the
-            <span className="capitalize"> {props.group}</span>!
+            <span className="capitalize"> {renderGroup(props.group)}</span>!
           </p>
           <Link to="/">
             <button onClick={endSession} className="home-button">
