@@ -22,7 +22,7 @@ export default (state = null, action) => {
         elements: action.payload,
         prevElement: null,
         answeredCorrect: null,
-        progress: 100,
+        progress: 0,
       };
     case END_PRACTICE:
       return null;
