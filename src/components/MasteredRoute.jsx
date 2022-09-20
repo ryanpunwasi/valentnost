@@ -1,10 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
+import { hideAlert, clearForm, endPractice } from "../actions";
 import { Link } from "react-router-dom";
 
 import "./MasteredRoute.css";
 
 const MasteredRoute = props => {
+  const endSession = () => {
+    props.clearForm();
+    props.hideAlert();
+    props.endPractice();
+  };
+
   return (
     <div className="mastered-page-container">
       {props.practice && (
@@ -26,7 +33,9 @@ const MasteredRoute = props => {
             <span className="capitalize"> {props.group}</span>!
           </p>
           <Link to="/">
-            <button className="home-button">PRACTICE ANOTHER GROUP</button>
+            <button onClick={endSession} className="home-button">
+              PRACTICE ANOTHER GROUP
+            </button>
           </Link>
         </div>
       )}
@@ -38,4 +47,8 @@ const mapStateToProps = state => {
   return { practice: state.practice, group: state.group };
 };
 
-export default connect(mapStateToProps)(MasteredRoute);
+export default connect(mapStateToProps, {
+  clearForm,
+  hideAlert,
+  endPractice,
+})(MasteredRoute);
