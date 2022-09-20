@@ -41,6 +41,17 @@ const MasteredRoute = props => {
           </Link>
         </div>
       )}
+      {!props.practice && (
+        <div className="mastered-container">
+          <i className="fa-solid fa-circle-radiation"></i>
+          <p>Whoops, there's nothing here!</p>
+          <Link to="/">
+            <button onClick={endSession} className="home-button">
+              TAKE ME HOME
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

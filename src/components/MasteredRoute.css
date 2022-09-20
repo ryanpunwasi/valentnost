@@ -21,6 +21,11 @@
   margin-bottom: 2em;
 }
 
+.mastered-page-container i {
+  color: white;
+  font-size: 10em;
+}
+
 #atom {
   --atom-size: 300px;
   position: relative;
