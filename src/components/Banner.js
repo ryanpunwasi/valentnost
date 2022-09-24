@@ -5,12 +5,14 @@ import "./Banner.css";
 
 const Banner = props => {
   const handleClickCheck = () => {
+    const correctAnswer =
+      props.mode === "name"
+        ? props.practice.currentElement.name.toLowerCase()
+        : props.practice.currentElement.symbol.toLowerCase();
+
     let text = props.input;
     if (text.trim() && !props.practice.hasAnswered) {
-      if (
-        text.toLowerCase().trim() ===
-        props.practice.currentElement.name.toLowerCase()
-      ) {
+      if (text.toLowerCase().trim() === correctAnswer) {
         props.checkAnswer(true, props.practice.currentElement);
       } else {
         props.checkAnswer(false, props.practice.currentElement);
