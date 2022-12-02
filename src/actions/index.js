@@ -12,9 +12,9 @@ import {
   NEXT_QUESTION,
   END_PRACTICE,
 } from "./types";
+import { table } from "../data/periodicTable";
 
 import history from "../history";
-import periodicTable from "../apis/periodicTable";
 import { buildElementsFromGroup } from "../utils/buildElementsFromGroup";
 import { calculateProgress } from "../utils/calculateProgress";
 import { round } from "../utils/round";
@@ -27,10 +27,13 @@ export const selectElement = element => {
 };
 
 export const fetchTable = () => {
-  return async function (dispatch, getState) {
-    const response = await periodicTable.get("/");
-
-    dispatch({ type: FETCH_TABLE, payload: response });
+  // return async function (dispatch, getState) {
+  //   const response = await periodicTable.get("/");
+  //   dispatch({ type: FETCH_TABLE, payload: response });
+  // };
+  return {
+    type: FETCH_TABLE,
+    payload: table,
   };
 };
 

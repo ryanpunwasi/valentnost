@@ -4,7 +4,7 @@ import { FETCH_TABLE } from "../actions/types";
 export default (state = null, action) => {
   switch (action.type) {
     case FETCH_TABLE:
-      return action.payload.data;
+      return action.payload;
     default:
       return state;
   }
