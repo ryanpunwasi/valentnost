@@ -36,3 +36,15 @@ body {
   --lanthanide: #b0ffff;
   --actinide: #cbffee;
 }
+
+.saturate-light {
+  filter: saturate(1.2);
+}
+
+.saturate-medium {
+  filter: saturate(1.5);
+}
+
+.saturate-heavy {
+  filter: saturate(2);
+}

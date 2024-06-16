@@ -228,7 +228,9 @@ const Table = props => {
   return (
     <div className="table-container">
       {!props.table && <LoadingIcon message="Loading table..." />}
-      <div className="table-grid">{props.table && renderTable()}</div>
+      <div className="table-grid saturate-medium">
+        {props.table && renderTable()}
+      </div>
     </div>
   );
 };

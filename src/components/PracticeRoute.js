@@ -78,7 +78,7 @@ const PracticeRoute = props => {
         </Link>
         <Seen practice={props.practice} />
       </div>
-      <div className="centered-practice-container">
+      <div className="centered-practice-container saturate-medium">
         <Prompt
           group={props.group}
           element={props.practice.currentElement}

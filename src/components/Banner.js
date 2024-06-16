@@ -29,7 +29,7 @@ const Banner = props => {
 
   if (!props.practice.hasAnswered) {
     return (
-      <div className={`banner banner-${props.group}`}>
+      <div className={`banner banner-${props.group} saturate-medium`}>
         <div className={`banner-text banner-${props.group}`}></div>
         <button
           onClick={handleClickCheck}

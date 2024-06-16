@@ -32,7 +32,9 @@ const Progress = props => {
         />
       }
       {!mastered && (
-        <div className={`progress-status progress-status-${props.group}`}>
+        <div
+          className={`progress-status progress-status-${props.group} saturate-medium`}
+        >
           {renderProgress(props.practice.progress)}
         </div>
       )}
