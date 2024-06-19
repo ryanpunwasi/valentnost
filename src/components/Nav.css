@@ -38,7 +38,7 @@ i {
 }
 
 .support i {
-  color: pink;
+  color: var(--transition-metal);
 }
 
 .home i {

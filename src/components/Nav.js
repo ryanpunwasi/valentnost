@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { TWITTER, SUPPORT } from "../config/links";
+import { PORTFOLIO_LINK } from "../config/links";
 
 import "./Nav.css";
 
@@ -19,13 +19,8 @@ const Nav = () => {
             </Link>
           </li>
           <li className="support">
-            <a href={SUPPORT} target="_blank" rel="noreferrer">
-              <i className="fa-regular fa-heart"></i>
-            </a>
-          </li>
-          <li className="twitter">
-            <a href={TWITTER} target="_blank" rel="noreferrer">
-              <i className="fa-solid fa-hashtag"></i>
+            <a href={PORTFOLIO_LINK} target="_blank" rel="noreferrer">
+              <i class="fa-regular fa-user"></i>
             </a>
           </li>
         </ul>
